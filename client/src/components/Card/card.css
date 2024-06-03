@@ -1,0 +1,40 @@
+.card{
+    width: 22.791vw;
+    padding-bottom: 1rem;
+    border: 1px solid #cdd7e1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card h2{
+    font-size: 1.2vw;
+}
+.card span{
+    font-size: 0.9rem;
+}
+.img_Section{
+    overflow: hidden;
+    height: 30vh;
+}
+.img_Section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.info_section{
+    padding: 0 1rem;
+}
+@media (max-width: 900px) {
+    .card {
+        width: 27.791vw;
+    }
+    .card h2{
+        font-size: 2vw;
+    }
+    .card span{
+        font-size: 1.5vw;
+    }
+    .card button{
+        font-size: 1.2vw;
+    }
+}

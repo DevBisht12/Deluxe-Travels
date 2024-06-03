@@ -1,0 +1,592 @@
+.home{
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.hero_section {
+  height: 120vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/src/assets/Hero_img1.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.call{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 1rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.call svg{
+  font-size: 2rem;
+}
+.hero_section h1{
+  color: white;
+  /* font-size: 65px; */
+  font-weight: 600;
+  font-family: "Popping", sans-serif;
+  text-align: center;
+  line-height: 6vw;
+  font-size: 4.5vw;
+}
+.hero_section p{
+  color: white;
+  /* font-size: 18px; */
+  font-weight: 500;
+  font-family: "Popping", sans-serif;
+  text-align: center;
+  opacity: 80%;
+  padding: 0.5rem;
+  font-size: 1.33vw;
+}
+.hero_section button{
+  background-color: #FFC107;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Popping", sans-serif;
+  text-align: center;
+  border: none;
+  border-radius: 100px;
+  padding: 15px 32px;
+  cursor: pointer;
+  opacity: 80%;
+  margin: 1rem;
+}
+.hero_section button:hover{
+  color: black;
+  background-color: white;
+}
+.Typewriter {
+  display: inline;
+  color: #FFC107;
+}
+
+/* OPATIONS SECTON CSS */
+.car_opation_section {
+  font-family: "Popping", sans-serif;
+  margin: 2rem 2rem 10vh 2rem;
+  
+}
+
+.car_opation_section h3 {
+  font-size: 2vw;
+  font-weight: 600;
+  margin-left: 5vw;
+}
+.opationsCard {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.opationsCard p{
+  font-size: 1.186vw;
+}
+.Card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  transition: 0.5s ease-in;
+  border-radius: 100px;
+  height: 13.343vw;
+  width: 13.343vw;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.Card:hover {
+  border-radius: 100px;
+  background-color: #8ba9d038;
+  transition: 0.5s ease-out;
+}
+
+.Card img {
+  /* width: 130px; */
+  width: 9.637vw;
+  object-fit: cover;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-out;
+}
+
+.Card:hover img {
+  animation: driveAway 0.3s forwards, driveBack 0.4s 0.3s forwards;
+}
+/* .Card:hover p {
+    animation: driveAway 0.3s forwards, driveBack 0.4s 0.3s forwards;
+  } */
+
+@keyframes driveAway {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(10vw);
+    opacity: 0;
+  }
+}
+
+@keyframes driveBack {
+  0% {
+    transform: translateX(-10vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* BANNER SECTION */
+
+.banner_section {
+  /* padding: 3vw; */
+  position: relative;
+  font-family: "Popping", sans-serif;
+  padding: 0 4rem 0 4rem;
+  margin-bottom: 10vh;
+}
+.banner_main {
+  display: flex;
+  width: 100%;
+  background-image: url(/src/assets/Banner.jpg);
+  height: 60vh;
+  fill-opacity: calc();
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  justify-content: flex-end;
+  align-items: center;
+}
+.banner_main h2 {
+  font-size: 3.5vw;
+  text-align: center;
+  position: relative;
+  z-index: 12;
+  color: white;
+  font-weight: 600;
+  padding-right: 8vw;
+}
+.banner_main span {
+  color: #ffc107;
+}
+
+/* OUR SERVICES */
+.Our_Servies {
+  font-family: "Popping", sans-serif;
+  margin: 1rem 2rem 10vh 2rem;
+}
+.Our_Servies h3 {
+  font-size: 2vw;
+  font-weight: 600;
+  margin-left: 4vw;
+}
+.services_card {
+  display: flex;
+  padding: 2rem;
+
+  justify-content: space-around;
+}
+/* WHAT WE DO SECTION  */
+
+.what_we_do_Section {
+  display: flex;
+  margin: 10vh 0;
+  font-family: "Popping", sans-serif;
+}
+.left_sec {
+  padding: 2rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f5f8fe;
+}
+.left_sec h3{
+  /* font-size: 45px; */
+  font-size: 3.336vw;
+}
+.left_sec p{
+  /* font-size: 18px; */
+  font-size: 1.434vw;
+  line-height: 26px;
+  margin: 0.5rem 0;
+}
+.left_sec button{
+  background-color: black;
+  color: white;
+  width: 30%;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+}
+.right_img_sec {
+  background-image: url("../../assets/waht_we_do_img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 70vh;
+}
+.services_card_mobile{
+  display: none;
+}
+
+
+/* WHY TO CHOOSE US SECTION  */
+
+.why_choose_us_sec{
+  font-family: "Popping", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+  margin-top: 10vh;
+}
+.why_choose_us_sec h2{
+  font-size: 2vw;
+
+}
+.why_Choose_main_section{
+  margin: 2vw;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wny_Choose_left_section{
+  padding: 2vw;
+  margin: 2vw;
+}
+.why_Choose_main_section{
+  margin: 2vw;
+  right: 2vw;
+}
+
+.why_Choose_main_section p{
+  font-size: 1.334vw;
+  padding-bottom: 2rem;
+  width: 75%;
+  line-height: 1.5rem;
+  opacity: 90%;
+}
+.why_Choose_main_section h4{
+  padding: 1rem 0;
+  font-size: 1.7vw  ;
+}
+
+/* Testimonials section  */
+.Testimonials_section{
+  font-family: "Popping",sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  height: 50vh;
+  margin-bottom: 10vh;
+}
+.Testimonials_section h2{
+  font-size: 2vw;
+  margin-bottom: 4vh;
+}
+.testimonial_main {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+}
+.testimonial_left{
+  width: 40%;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* text-align: center; */
+  padding: 4vw;
+}
+.testimonial_left h3{
+  font-size: 24px;
+}
+.testimonial_left p{
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0.5rem 0;
+}
+.testimonial_right{
+  width: 100%;
+  /* border: 2px solid green; */
+}
+
+
+
+/* MOBILE VIEW RESPONSIVE  */
+
+
+@media (max-width: 900px) {
+  h3{
+    font-size: 1.4rem;
+  }
+  .hero_section{
+    height: 40vh;
+  }
+  .opationsCard{
+    margin: 1.5rem 0;
+  }
+  .Card img{
+    width: 11vw;
+  }
+  .car_opation_section{
+    margin-bottom: 4vh;
+  }
+  .car_opation_section h3{
+    font-size: 1.4rem;
+  }
+  .banner_section {
+    margin-bottom: 4vh;
+  }
+  .banner_main{
+    height: 20vh;
+    margin-bottom: 4vh;
+  }
+  .img_Section{
+    height: 15vh;
+  }
+  .Our_Servies{
+    margin-bottom: 2vh;
+  }
+  .what_we_do_Section{
+    margin: 0;
+    height: 25vh;
+  }
+  .right_img_sec{
+    height: 25vh;
+  }
+  .why_choose_us_sec{
+    margin-top: 2rem;
+  }
+  .Testimonials_section{
+    height: 20vh;
+    margin-bottom: 2rem;
+  }
+  .Testimonials_section h2{
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width:450px){
+  .hero_section{
+    height: 60vh;
+  }
+  .hero_section h1 {
+    font-size: 1.7rem;
+    line-height: 4vh;
+  }
+  .hero_section p{
+    font-size: 0.6rem;
+  }
+  .hero_section button {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    margin: 0;
+}
+  .opationsCard{
+    overflow-x: scroll;
+    margin: 0;
+  }
+  .opationsCard p {
+    font-size: 1.1rem;
+}
+  .Card{
+    overflow: visible;
+    margin: 1rem 1.5rem;
+    width: 120px;
+    height: 120px;
+  }
+  .Card img{
+    width: 7.8rem;
+    padding: 1rem;
+  }
+  .car_opation_section {
+    margin: 1rem;
+}
+  .car_opation_section h3{
+    font-size: 1.2rem;
+  }
+  .banner_section {
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 4vh;
+  }
+  .banner_main{
+    height: 20vh;
+    justify-content: center;
+    margin-bottom: 4vh;
+  }
+  .banner_main h2{
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  .img_Section{
+    height: 15vh;
+  }
+  .Our_Servies{
+    margin-bottom: 2vh;
+  }
+  .what_we_do_Section{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .left_sec{
+    width: 100%;
+  }
+  .left_sec h3{
+    font-size: 1.5rem;
+  }
+  .left_sec p{
+    font-size: 0.8rem;
+  }
+  .left_sec button{
+    width: 100%;
+    border-radius: 10px;
+  }
+  .right_img_sec{
+   display: none;
+  }
+  .why_choose_us_sec{
+    margin-top: 2rem;
+  }
+  .Testimonials_section{
+    height: 20vh;
+    margin-bottom: 2rem;
+  }
+  .Testimonials_section h2{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .services_card{
+    padding: 0;
+  }
+  .Our_Servies h3{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
+  .services_card{
+    display: none;
+  }
+  .card {
+    width: 50vw;
+    /* border: 2px solid red; */
+  }
+  .card h2 {
+    font-size: 0.9rem;
+}
+.card span {
+  font-size: 0.7rem;
+  margin-bottom: 0;
+}
+  .services_card_mobile{
+    display: grid;
+    overflow-x: auto;
+    gap: 2rem;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    margin-bottom: 2rem;
+  }
+  .MuiCardContent-root{
+    display: flex;
+    flex-direction: row !important;
+  }
+  .why_choose_us_sec h2{
+    font-size: 1.2rem;
+  }
+  
+  .why_Choose_main_section{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  }
+  .why_Choose_main_section h4{
+    font-size: 1rem;
+  }
+  .why_Choose_main_section p{
+    font-size: 0.8rem;
+    width: 100%;
+  }
+}
+
+@media (max-width:380px){
+  .banner_main {
+    height: 28vh;
+
+}
+  .Card img{
+    width: 7.3rem;
+  }
+  .Our_Servies h3{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
+
+  .services_card{
+    display: none;
+  }
+  .card {
+    width:70vw;
+    /* border: 2px solid red; */
+  }
+  .img_Section {
+    height: 28vh;
+}
+  .card h2 {
+    font-size: 1.2rem;
+}
+.card span {
+  font-size: 0.7rem;
+  margin-bottom: 0;
+}
+  .services_card_mobile{
+    display: grid;
+    overflow-x: auto;
+    gap: 2rem;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    margin-bottom: 2rem;
+  }
+
+  .MuiCardContent-root{
+    display: flex;
+
+    flex-direction: row !important;
+  }
+  .card button {
+    font-size: 0.6rem;
+    margin: 0.7rem;
+}
+}
