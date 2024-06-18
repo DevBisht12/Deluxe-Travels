@@ -1,0 +1,75 @@
+.contact{
+    display: flex;
+}
+.contact_img_sec p{
+    font-size: 4rem;
+    color: white;
+}
+.contact_img_sec span{
+    font-size: 17px ;
+    color: white;
+    opacity: 90%;
+
+}
+.contact_img_sec{
+    background-image: url(/src/assets/About_page_img/texi2.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    background-repeat: no-repeat;
+    width: 60%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.form_sec{
+    padding: 0rem 4rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .contact{
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .contact_img_sec{
+        width: 80%;
+        object-fit: contain;
+    }
+    .contact_img_sec p{
+        display: none;
+    }
+    .contact_img_sec span{
+        display: none;
+    }
+    .form_sec{
+        width: 100%;
+        padding: 1rem;
+    
+    }
+}
+
+@media (max-width: 450px) {
+    .contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+    .contact_img_sec{
+        display: none;
+        width: 25%;
+    }
+    .bookingForm{
+        padding: 0.5rem;
+    }
+    
+
+}

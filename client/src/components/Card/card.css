@@ -1,5 +1,5 @@
 .card{
-    width: 22.791vw;
+    width: 18rem;
     padding-bottom: 1rem;
     border: 1px solid #cdd7e1;
     border-radius: 10px;
@@ -7,14 +7,14 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .card h2{
-    font-size: 1.2vw;
+    font-size: 1.2rem;
 }
 .card span{
     font-size: 0.9rem;
 }
 .img_Section{
     overflow: hidden;
-    height: 30vh;
+    height: 15rem;
 }
 .img_Section img{
     width: 100%;
@@ -26,15 +26,17 @@
 }
 @media (max-width: 900px) {
     .card {
-        width: 27.791vw;
+        width: 1.5rem;
     }
     .card h2{
-        font-size: 2vw;
+        font-size: 1rem;
     }
     .card span{
-        font-size: 1.5vw;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
     }
     .card button{
-        font-size: 1.2vw;
+        font-size: 0.7rem;
+        padding: 0.5rem;
     }
 }

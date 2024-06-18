@@ -63,7 +63,7 @@ const Footer = () => {
               <Facebook />
             </Link>
             <Link
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/deluxetravels19/?igsh=eHRqMDdkbHloZzR3"
               color="inherit"
               sx={{ pl: 1, pr: 1 }}
             >
@@ -77,7 +77,7 @@ const Footer = () => {
         <Box mt={5}>
           <Typography variant="body2" color="white" align="center">
             {"Copyright © "}
-            <Link color="inherit">Deluxe Travels</Link>{" "}
+            <Link href="/" color="inherit">Deluxe Travels</Link>
             {new Date().getFullYear()}
             {"."}
           </Typography>

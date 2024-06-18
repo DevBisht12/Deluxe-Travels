@@ -1,5 +1,5 @@
 .home{
-  max-width: 1350px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 
@@ -10,7 +10,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(/src/assets/Hero_img1.jpg);
+  background-image: url(/src/assets/Hero_img1.webp);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +39,6 @@
 }
 .hero_section h1{
   color: white;
-  /* font-size: 65px; */
   font-weight: 600;
   font-family: "Popping", sans-serif;
   text-align: center;
@@ -48,7 +47,6 @@
 }
 .hero_section p{
   color: white;
-  /* font-size: 18px; */
   font-weight: 500;
   font-family: "Popping", sans-serif;
   text-align: center;
@@ -87,9 +85,9 @@
 }
 
 .car_opation_section h3 {
-  font-size: 2vw;
+  font-size: 1.6rem;
   font-weight: 600;
-  margin-left: 5vw;
+  margin-left: 3vw;
 }
 .opationsCard {
   display: flex;
@@ -110,8 +108,8 @@
   font-family: "Poppins", sans-serif;
   transition: 0.5s ease-in;
   border-radius: 100px;
-  height: 13.343vw;
-  width: 13.343vw;
+  height: 10.343rem;
+  width: 10.343rem;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -125,8 +123,7 @@
 }
 
 .Card img {
-  /* width: 130px; */
-  width: 9.637vw;
+  width: 7.637rem;
   object-fit: cover;
   transition: transform 0.3s ease-in, opacity 0.3s ease-out;
 }
@@ -134,9 +131,6 @@
 .Card:hover img {
   animation: driveAway 0.3s forwards, driveBack 0.4s 0.3s forwards;
 }
-/* .Card:hover p {
-    animation: driveAway 0.3s forwards, driveBack 0.4s 0.3s forwards;
-  } */
 
 @keyframes driveAway {
   0% {
@@ -163,7 +157,6 @@
 /* BANNER SECTION */
 
 .banner_section {
-  /* padding: 3vw; */
   position: relative;
   font-family: "Popping", sans-serif;
   padding: 0 4rem 0 4rem;
@@ -172,7 +165,7 @@
 .banner_main {
   display: flex;
   width: 100%;
-  background-image: url(/src/assets/Banner.jpg);
+  background-image: url(/src/assets/Banner.webp);
   height: 60vh;
   fill-opacity: calc();
   background-size: cover;
@@ -201,9 +194,9 @@
   margin: 1rem 2rem 10vh 2rem;
 }
 .Our_Servies h3 {
-  font-size: 2vw;
+  font-size: 1.6rem;
   font-weight: 600;
-  margin-left: 4vw;
+  margin-left: 3vw;
 }
 .services_card {
   display: flex;
@@ -227,13 +220,11 @@
   background-color: #f5f8fe;
 }
 .left_sec h3{
-  /* font-size: 45px; */
-  font-size: 3.336vw;
+  font-size: 2.5rem;
 }
 .left_sec p{
-  /* font-size: 18px; */
-  font-size: 1.434vw;
-  line-height: 26px;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
   margin: 0.5rem 0;
 }
 .left_sec button{
@@ -244,7 +235,7 @@
   margin: 0.5rem 0;
 }
 .right_img_sec {
-  background-image: url("../../assets/waht_we_do_img.jpg");
+  background-image: url("../../assets/waht_we_do_img.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -267,7 +258,7 @@
   margin-top: 10vh;
 }
 .why_choose_us_sec h2{
-  font-size: 2vw;
+  font-size: 1.6rem;
 
 }
 .why_Choose_main_section{
@@ -287,7 +278,7 @@
 }
 
 .why_Choose_main_section p{
-  font-size: 1.334vw;
+  font-size: 1rem;
   padding-bottom: 2rem;
   width: 75%;
   line-height: 1.5rem;
@@ -295,7 +286,7 @@
 }
 .why_Choose_main_section h4{
   padding: 1rem 0;
-  font-size: 1.7vw  ;
+  font-size: 1.1rem  ;
 }
 
 /* Testimonials section  */
@@ -310,7 +301,7 @@
   margin-bottom: 10vh;
 }
 .Testimonials_section h2{
-  font-size: 2vw;
+  font-size: 1.5rem;
   margin-bottom: 4vh;
 }
 .testimonial_main {
@@ -321,12 +312,11 @@
 }
 .testimonial_left{
   width: 40%;
-  /* border: 2px solid red; */
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* text-align: center; */
   padding: 4vw;
 }
 .testimonial_left h3{
@@ -339,7 +329,6 @@
 }
 .testimonial_right{
   width: 100%;
-  /* border: 2px solid green; */
 }
 
 
@@ -347,18 +336,30 @@
 /* MOBILE VIEW RESPONSIVE  */
 
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   h3{
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
   }
   .hero_section{
-    height: 40vh;
+    height: 40rem;
   }
+  
   .opationsCard{
     margin: 1.5rem 0;
   }
+  .card{
+    width: 15rem;
+    height: fit-content;
+  }
+  .img_Section {
+    height: 10rem;
+}
   .Card img{
-    width: 11vw;
+    width: 12vw;
+  }
+  .Card{
+    height: 15vw;
+    width: 15vw;
   }
   .car_opation_section{
     margin-bottom: 4vh;
@@ -370,40 +371,95 @@
     margin-bottom: 4vh;
   }
   .banner_main{
-    height: 20vh;
+    height: 25vh;
     margin-bottom: 4vh;
-  }
-  .img_Section{
-    height: 15vh;
   }
   .Our_Servies{
     margin-bottom: 2vh;
   }
   .what_we_do_Section{
     margin: 0;
-    height: 25vh;
   }
   .right_img_sec{
-    height: 25vh;
+    height: 30rem;
+  }
+  .left_sec {
+    height: 30rem;
+}
+  .left_sec p{
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .left_sec button{
+    width: 100%;
   }
   .why_choose_us_sec{
     margin-top: 2rem;
   }
   .Testimonials_section{
-    height: 20vh;
+    height: 21rem;
     margin-bottom: 2rem;
   }
   .Testimonials_section h2{
     margin-bottom: 1rem;
   }
 }
-@media (max-width:450px){
+@media(max-width: 600px){
+  .left_sec{
+    width: 100%;
+    height: 40vh;
+  }
+  .right_img_sec{
+    display: none;
+  }
+  .services_card {
+    padding: 1rem;
+  }
+  .why_Choose_main_section {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .why_Choose_left_section{
+    width: 100%;
+  }
+  .why_Choose_main_section p{
+    width: 100%;
+  }
+  .opationsCard{
+    overflow-x: scroll;
+    margin: 0;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  .opationsCard p {
+    font-size: 1.1rem;
+}
+  .Card{
+    overflow: visible;
+    margin: 1rem 1.5rem;
+    width: 120px;
+    height: 120px;
+  }
+  .Card img{
+    width: 7.8rem;
+    padding: 1rem;
+  }
+  .car_opation_section {
+    margin: 1rem;
+}
+  .car_opation_section h3{
+    font-size: 1.2rem;
+  }
+}
+@media (max-width:460px){
   .hero_section{
     height: 60vh;
   }
   .hero_section h1 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     line-height: 4vh;
+    margin: 0.9rem;
   }
   .hero_section p{
     font-size: 0.6rem;
@@ -451,7 +507,7 @@
     padding: 0;
   }
   .img_Section{
-    height: 15vh;
+    height: 10rem;
   }
   .Our_Servies{
     margin-bottom: 2vh;
@@ -481,7 +537,7 @@
     margin-top: 2rem;
   }
   .Testimonials_section{
-    height: 20vh;
+    height: 40vh;
     margin-bottom: 2rem;
   }
   .Testimonials_section h2{
@@ -501,7 +557,6 @@
   }
   .card {
     width: 50vw;
-    /* border: 2px solid red; */
   }
   .card h2 {
     font-size: 0.9rem;
@@ -559,10 +614,9 @@
   }
   .card {
     width:70vw;
-    /* border: 2px solid red; */
   }
   .img_Section {
-    height: 28vh;
+    height: 24vh;
 }
   .card h2 {
     font-size: 1.2rem;

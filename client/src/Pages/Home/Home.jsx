@@ -1,28 +1,83 @@
 import Typewriter from "typewriter-effect";
-import InputField from "../../components/utils/inputField/InputField";
-import MUIDateTimePicker from "../../components/utils/Time&DatePicker/TimeDatePicker";
-import Input from "@mui/joy/Input";
+import { Suspense , lazy } from "react";
 import { AiTwotoneSafetyCertificate } from "react-icons/ai";
 import { PiCarProfile } from "react-icons/pi";
-import { FaStar } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import OfferCard from "../../components/Card/Card";
-import Mini from "../../assets/Opations_Photos/Mini.png";
-import Sedan from "../../assets/Opations_Photos/Sedan.png";
-import SUV from "../../assets/Opations_Photos/SUV.png";
-import Traveller from "../../assets/Opations_Photos/Traveller.png";
-import Bus from "../../assets/Opations_Photos/Bus.png";
+import Mini from "../../assets/Opations_Photos/Mini.webp";
+import Sedan from "../../assets/Opations_Photos/Sedan.webp";
+import SUV from "../../assets/Opations_Photos/SUV.webp";
+import Traveller from "../../assets/Opations_Photos/Traveller.webp";
+import Bus from "../../assets/Opations_Photos/Bus.webp";
 import OfferSlider from "../../components/offerSlider/OfferSlider";
+import Marquee from "react-fast-marquee";
+import BasicModal from "../../components/Modal/Modal";
+import TestimonialCard from "../../components/Testimonial/TestimonialsCard";
+import DelhiImg from '../../assets/ServicesCard_img/Delhi.webp'
+import ManaliImg from '../../assets/ServicesCard_img/Manali.webp'
+import Dalhousie from '../../assets/ServicesCard_img/Dalhousie Dharamshala.webp'
+import jaipurImg from '../../assets/ServicesCard_img/jaipur.webp'
+import {Helmet} from "react-helmet";
 import "./Home.css";
-import { IoIosCall } from "react-icons/io";
-import TestimonialSlider from "../../components/Testimonial/TestimonialSlider";
+
 
 const Home = () => {
+  const reviews = [
+    {
+      name: "Vinay Kumar",
+      shortName: "VK",
+      color: "#33691e",
+      rating:4,
+      message:
+        "Very good service. The driver was cooperative, and the journey to Delhi was safe with my family.",
+    },
+    {
+      name: "Raj Kishor",
+      shortName: "RK",
+      color: "#fbbc04",
+      rating:5,
+      message:
+        "I booked a cab from Deluxe Taxi Stand a few months ago. It was a very good experience. The entire trip was excellent.",
+    },
+    {
+      name: "Amit Kumar",
+      shortName: "AK",
+      color: "#03a9f4",
+      rating:5,
+      message:
+        "Excellent experience with Deluxe Taxi. Seamless booking and fantastic trip. Highly recommend for reliability and comfort.",
+    },
+    {
+      name: "Rakesh Kumar",
+      shortName: "RK",
+      color: "#bf360c",
+      rating:4,
+      message:
+        "Thoroughly impressed with Deluxe Taxi. Easy booking, smooth ride, and professional driver. Highly recommend for quality service.",
+    },
+    {
+      name: "Uday",
+      shortName: "U",
+      color: "#7b1fa2",
+      rating:5,
+      message:
+        "Outstanding experience with Deluxe Taxi. Hassle-free booking, perfect ride, clean vehicle, and courteous driver. Will choose again.",
+    },
+  ];
+
+
+
   return (
     <div className="home">
-      <div className="call">
-        <a href="tel:09988889998"><IoIosCall/></a>
-      </div>
-      <div className="hero_section ">
+      <Helmet>
+        <title>Deluxe Travels - Book Your Ride Now!</title>
+        <meta name="author" content="Rahul Bisht"></meta>
+        <meta name="description" content="Book your ride with Deluxe Taxi Stand, the most reliable 
+        and comfortable taxi service in town. Get instant quotes and book now!" />
+       <meta name="keywords" content="Deluxe Travels, Best taxi service in Chandigarh, Best taxi service in Chandigarh sector 19, taxi service, car rental, book your ride, transportation, reliable taxi, comfortable taxi, luxury travel, SUV rental, sedan rental, traveler rental, bus rental, taxi booking, travel services, safe journey, 24/7 taxi service" />
+
+      </Helmet>
+      <div className="hero_section " >
         <h1>
           Deluxe Travels ensures you <br /> travel with{" "}
           <Typewriter
@@ -34,34 +89,35 @@ const Home = () => {
           />
         </h1>
         <p>Wherever You Need to Be, We'll Take You There</p>
-        <button>Book Now</button>
+        <BasicModal/>
       </div>
-      <div className="car_opation_section">
+
+      <div className="car_opation_section" >
         <h3>Opations</h3>
         <div className="opationsCard">
-          <div className="Card">
-            <img src={Mini} alt="" />
-            <p>Mini</p>
-          </div>
-          <div className="Card">
-            <img src={Sedan} alt="" />
+          <Link to='/contact' ><div className="Card">
+            <img loading="lazy" src={Mini} alt="Rent Car logo" />
+            <p>Rent</p>
+          </div></Link>
+          <Link to='/contact' ><div className="Card">
+            <img loading="lazy" src={Sedan} alt="Sedan Car logo" />
             <p>Sedan</p>
-          </div>
-          <div className="Card">
-            <img src={SUV} alt="" />
+          </div></Link>
+          <Link to='/contact' ><div className="Card">
+            <img loading="lazy" src={SUV} alt="SUV Car logo" />
             <p>SUV</p>
-          </div>
-          <div className="Card">
-            <img src={Traveller} alt="" />
+          </div></Link>
+          <Link to='/contact' ><div className="Card">
+            <img loading="lazy" src={Traveller} alt="Traveller logo" />
             <p>Traveller</p>
-          </div>
-          <div className="Card">
-            <img src={Bus} alt="" />
+          </div></Link>
+          <Link to='/contact' ><div className="Card">
+            <img loading="lazy" src={Bus} alt="Bus logo" />
             <p>Bus</p>
-          </div>
+          </div></Link>
         </div>
       </div>
-      <div className="banner_section">
+      <div className="banner_section"  >
         <div className="banner_main">
           <h2>
             Book Your Trip With <br /> Deluxe Travels <br /> <span>Now!</span>
@@ -74,11 +130,31 @@ const Home = () => {
           <OfferSlider />
         </div>
         <div className="services_card_mobile">
-          <OfferCard imgSrc={"https://images.unsplash.com/photo-1571677465484-2dd540924245?q=80&w=1524&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} />
-          <OfferCard imgSrc={"https://images.unsplash.com/photo-1506268452458-bfb3757ed859?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} />
-          <OfferCard imgSrc={"https://plus.unsplash.com/premium_photo-1697729600773-5b039ef17f3b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} />
-          <OfferCard imgSrc={"https://images.unsplash.com/photo-1609947017136-9daf32a5eb16?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} />
-          <OfferCard imgSrc={"https://images.unsplash.com/photo-1571677465484-2dd540924245?q=80&w=1524&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} />
+          <OfferCard
+            imgSrc={
+              DelhiImg
+            }
+            cardTitle={"Chandigarh to Delhi"}
+            subTitle={"Economical compact car"}
+          />
+          <OfferCard
+            imgSrc={
+              jaipurImg
+            }
+            cardTitle={"Jaipur Tour"}
+            subTitle={"Economical compact car"}
+          />
+          <OfferCard
+            imgSrc={ManaliImg}
+            cardTitle={"Shimla Manali Tour"}
+            subTitle={"Economical compact car"}
+          />
+          <OfferCard
+            imgSrc={Dalhousie}
+            cardTitle={"Dalhousie Dharamshala"}
+            subTitle={"Economical compact car"}
+          />
+
         </div>
       </div>
       <div className="what_we_do_Section">
@@ -89,9 +165,9 @@ const Home = () => {
             transportation services with diverse fleets of Cars. Experienced
             drivers provide efficient navigation and recommendations, ensuring
             customer satisfaction and a memorable experience. Competitive rates
-            and 24-hour service.{" "}
+            and 24-hour service.
           </p>
-          <button>Know about us</button>
+          <Link to="/about"><button>  Know about us</button></Link>
         </div>
         <div className="right_img_sec"></div>
       </div>
@@ -132,17 +208,29 @@ const Home = () => {
       <div className="Testimonials_section">
         <h2>Testimonials</h2>
         <div className="testimonial_main">
-            {/* <div className="testimonial_left">
-              <h3>Deluxe Travels holds the 4.2 rating  On Google.</h3>
-              <p>Deluxe Travels, with its distinguished reputation, proudly maintains a stellar 4.2-star rating on Google, a testament to the countless exceptional experiences continually shared by our delighted customers. </p>
-            </div> */}
-            <div className="testimonial_right">
-            <TestimonialSlider/>
-            </div>
+          <div className="testimonial_right">
+            <Marquee pauseOnHover={true}
+            gradientWidth={50}
+            gradient={true}>
+              {reviews.map((review, i) => (
+                <TestimonialCard
+                  key={i}
+                  rating={review.rating}
+                  name={review.name}
+                  shortName={review.shortName}
+                  color={review.color}
+                  message={review.message}
+                />
+              ))}
+            </Marquee>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Home;
+
+
+
+ export default Home;

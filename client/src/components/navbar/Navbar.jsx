@@ -1,29 +1,45 @@
-import './navbar.css'
-import DrawerMobileNavigation from './mobileMenu/MobileMenu'
+import "./navbar.css";
+import { Link } from "react-router-dom";
+import DrawerMobileNavigation from "./mobileMenu/MobileMenu";
 
-const Navbar=()=>{
-    return(
-        <header className="navbar">
-            <div className="logo_section">
-                <h1><strong>Deluxe</strong>Travels</h1>
-            </div>
-            <div className="right_action_section">
-                <ul>
-                    <li>Services</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Book Now</li>
-                    <li>User</li>
-                </ul>
-            </div>
-            {/* <div className="mobile_logo">
-                <h1><strong>D</strong>T</h1>
-            </div> */}
-            <div className="mobile_menu">
-                <DrawerMobileNavigation/>
-            </div>
-        </header>
-    )
-}
+const Navbar = () => {
+  return (
+    <header className="navbar">
+      <div className="logo_section">
+        <Link to="/">
+          <h1>
+            <strong>Deluxe</strong>Travels
+          </h1>
+        </Link>
+      </div>
+      {/* <div className="right_action_section">
+        <ul>
+          <Link to="/services">
+            <li>Services</li>
+          </Link>
+          <Link to="/About">
+            <li>About</li>
+          </Link>
+          <Link to="/contact">
+            <li>Contact</li>
+          </Link>
+          <li>Book Now</li>
+        </ul>
+      </div> */}
 
-export default Navbar
+<div className="right_action_section">
+        <ul>
+          <li><Link to="/services">Services</Link></li>
+          <li><Link to="/About">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/contact">Book Now</Link></li>
+        </ul>
+      </div>
+      <div className="mobile_menu">
+        <DrawerMobileNavigation />
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;

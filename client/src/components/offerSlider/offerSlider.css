@@ -1,9 +1,24 @@
 .swiper-slide {
-    width: 350px !important;
+    width: 20rem !important;
 }
-@media (max-width: 900px) {
+
+.swiper-button-prev {
+    background: #ffffff9e;
+    height: 4rem;
+    width: 3rem;
+    border-radius: 5px;
+    color: black;
+}
+.swiper-button-next {
+    background: #ffffff9e;
+    height: 4rem;
+    width: 3rem;
+    border-radius: 5px;
+    color: black;
+}
+@media (max-width: 1080px) {
     .swiper-slide {
-     width: 30vw !important;
+     width: 16rem !important;
     }
 
 }
@@ -14,3 +29,4 @@
     }
 
 }
+
